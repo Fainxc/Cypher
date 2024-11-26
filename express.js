@@ -68,7 +68,7 @@ app.get('/linkCommand', async (req, res) => {
 
         // Generate the link if not linked
         const state = Buffer.from(discordUserId).toString('base64');
-        const linkUrl = `https://www.patreon.com/oauth2/authorize?response_type=code&client_id=${process.env.PATREON_CLIENT_ID}&redirect_uri=http://localhost:3000/oauth/callback&state=${state}`;
+        const linkUrl = `https://www.patreon.com/oauth2/authorize?response_type=code&client_id=${process.env.PATREON_CLIENT_ID}&redirect_uri=https://cypher-8noe.onrender.com/oauth/callback&state=${state}`;
         
         res.send(`Link Your Patreon Account<br><a href="${linkUrl}">Click here to link your Patreon account.</a>`);
     } catch (error) {
