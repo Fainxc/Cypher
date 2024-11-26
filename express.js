@@ -25,7 +25,7 @@ app.get('/oauth/callback', async (req, res) => {
                 code,
                 client_id: process.env.PATREON_CLIENT_ID, // Use environment variables
                 client_secret: process.env.PATREON_CLIENT_SECRET, // Use environment variables
-                redirect_uri: 'http://localhost:3000/oauth/callback',
+                redirect_uri: 'https://cypher-8noe.onrender.com/oauth/callback',
                 grant_type: 'authorization_code',
             }).toString(),
             { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
